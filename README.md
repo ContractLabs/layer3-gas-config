@@ -79,6 +79,12 @@ cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on lay
 # 5. SetL2BaseFee
 cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setL2BaseFee(uint256)" 10000000) --private-key "<private key>"
 ```
+
+### Check gas base fee:
+```bash
+cast gas-price --rpc-url "<layer3 rpc url>"
+```
+> **Notice**: If the result does not equal your L2BaseFee or MinimumL2BaseFee, please try setting L2BaseFee and MinimumL2BaseFee a couple of times.
 ### Errors:
   - (code: -32000, message: execution reverted, data: None): Incorrect type parameter
   - (code: -32000, message: intrinsic gas too low, data: None): Add these options to the failed command `--gas-price <your-gas-price> --gas-limit <your-gas-limit>`
