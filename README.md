@@ -11,6 +11,12 @@ cast call --rpc-url "<layer3 rpc url>" 0x000000000000000000000000000000000000006
 ```
 
 ### Config gas in range (0.001 ~ 0.01)
+* Current setting:
+  - L1PricingRewardRate: 0
+  - L1PricePerUnit: 550000000000 (550 Gwei)
+  - MaxTxGasLimit: 250000000000 (250 Gwei)
+  - MinimumL2BaseFee: 300000000 (0,3 Gwei)
+  - L2BaseFee: 300000000 (0,3 Gwei)
 > **Warning**: When setting l1 the price per unit is higher, increase it little by little. If the gas price is greater than 1 USDT, you may have to abandon that chain. Or you can find a way to disable configured cap before setting l1 price per unit.
 * If owner is EOA address:
 ```bash
