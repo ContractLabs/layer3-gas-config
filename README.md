@@ -17,7 +17,7 @@ cast call --rpc-url "<layer3 rpc url>" 0x000000000000000000000000000000000000006
   - MaxTxGasLimit: 250000000000 (250 Gwei)
   - MinimumL2BaseFee: 300000000 (0,3 Gwei)
   - L2BaseFee: 300000000 (0,3 Gwei)
-> **Warning**: When setting l1 the price per unit is higher, increase it little by little. If the gas price is greater than 1 USDT, you may have to abandon that chain. Or you can find a way to disable configured cap before setting l1 price per unit.
+> **Warning**: When setting l1 the price per unit is higher, increase it little by little. If the gas price is greater than 1 USDT, you may have to abandon that chain. Or you can try to disable configured cap on your orbit node `--execution.rpc.tx-fee-cap=0` [more detail here](https://docs.arbitrum.io/node-running/how-tos/running-an-orbit-node).
 * If owner is EOA address:
 ```bash
 # 1. SetL1PricingRewardRate
@@ -48,4 +48,4 @@ cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on lay
   - (code: -32000, message: execution reverted, data: None): Incorrect type parameter
   - (code: -32000, message: intrinsic gas too low, data: None): Add these options to the failed command `--gas-price <your-gas-price> --gas-limit <your-gas-limit>`
   - (code: -32000, message: max fee per gas less than block base fee: address 0xa97044ced980AFc8d077A5a69F1d50A9e8899548, maxFeePerGas: 30000000 baseFee: 100000000, data: None): Gas price less than base fee
-  - (code: -32000, message: tx fee (6.87 ether) exceeds the configured cap (1.00 ether), data: None): Create new chain :v
+  - (code: -32000, message: tx fee (6.87 ether) exceeds the configured cap (1.00 ether), data: None): Try to disable configured cap on orbit node.
