@@ -25,7 +25,7 @@ cast send 0x0000000000000000000000000000000000000070 "setL1PricingRewardRate(uin
 # 2. SetL1PricePerUnit
 cast send 0x0000000000000000000000000000000000000070 "setL1PricePerUnit(uint256)" 550000000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 3. SetMaxTxGasLimit
-cast send 0x0000000000000000000000000000000000000070 "setMaxTxGasLimit(uint256)" 250000000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
+cast send 0x0000000000000000000000000000000000000070 "setMaxTxGasLimit(uint64)" 250000000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 4. SetMinimumL2BaseFee
 cast send 0x0000000000000000000000000000000000000070 "setMinimumL2BaseFee(uint256)" 300000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 5. SetL2BaseFee
@@ -38,7 +38,7 @@ cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on lay
 # 2. SetL1PricePerUnit
 cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setL1PricePerUnit(uint256)" 550000000000) --private-key "<private key>"
 # 3. SetMaxTxGasLimit
-cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMaxTxGasLimit(uint256)" 250000000000) --private-key "<private key>"
+cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMaxTxGasLimit(uint64)" 250000000000) --private-key "<private key>"
 # 4. SetMinimumL2BaseFee
 cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMinimumL2BaseFee(uint256)" 300000000) --private-key "<private key>"
 # 5. SetL2BaseFee
@@ -60,7 +60,7 @@ cast send 0x0000000000000000000000000000000000000070 "setL1PricingRewardRate(uin
 # 2. SetL1PricePerUnit
 cast send 0x0000000000000000000000000000000000000070 "setL1PricePerUnit(uint256)" 0 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 3. SetMaxTxGasLimit
-cast send 0x0000000000000000000000000000000000000070 "setMaxTxGasLimit(uint256)" 250000000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
+cast send 0x0000000000000000000000000000000000000070 "setMaxTxGasLimit(uint64)" 250000000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 4. SetMinimumL2BaseFee
 cast send 0x0000000000000000000000000000000000000070 "setMinimumL2BaseFee(uint256)" 10000000 --private-key "<private key>" --rpc-url "<layer3 rpc url>"
 # 5. SetL2BaseFee
@@ -73,7 +73,7 @@ cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on lay
 # 2. SetL1PricePerUnit
 cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setL1PricePerUnit(uint256)" 0) --private-key "<private key>"
 # 3. SetMaxTxGasLimit
-cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMaxTxGasLimit(uint256)" 250000000000) --private-key "<private key>"
+cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMaxTxGasLimit(uint64)" 250000000000) --private-key "<private key>"
 # 4. SetMinimumL2BaseFee
 cast send --rpc-url "<layer3 rpc url>" "<UpgradeExecutor contract address on layer3>" "executeCall(address,bytes)" 0x0000000000000000000000000000000000000070 $(cast calldata "setMinimumL2BaseFee(uint256)" 10000000) --private-key "<private key>"
 # 5. SetL2BaseFee
